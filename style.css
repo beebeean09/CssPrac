@@ -40,3 +40,10 @@
   margin: 10px;
   padding: 5px;
 }
+
+@media screen and (max-width: 850px) {
+  .middle-content {
+    background: lightblue;
+    flex-direction: column;
+  }
+}
