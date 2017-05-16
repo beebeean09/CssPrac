@@ -41,6 +41,18 @@
   padding: 5px;
 }
 
+.cat-imgs-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.cat-img {
+  display: flex;
+  margin: 25px;
+}
+
 @media screen and (max-width: 850px) {
   .middle-content {
     background: lightblue;
