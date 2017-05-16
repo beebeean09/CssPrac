@@ -5,6 +5,7 @@
   background: pink;
   font-family: arial;
   font-size: 12px;
+  color: #9e365b;
 }
 
 .left-nav, .right-nav > h1 {
@@ -21,7 +22,7 @@
 
 .main-content {
   font-family: arial;
-
+  color: #9e365b;
 }
 
 .header-content {
@@ -42,15 +43,20 @@
 }
 
 .cat-imgs-container {
-  display: flex;
+  /*display: flex;
   align-items: center;
-  justify-content: center;
-  flex-flow: row wrap;
+  justify-content: center;*/
+  /*flex-flow: row wrap;*/
+  width: 100%;
 }
 
-.cat-img {
-  display: flex;
-  margin: 25px;
+.mySlides {
+  display: none;
+  margin: 12px;
+}
+
+.w3-left, .w3-right, .w3-badge {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 850px) {

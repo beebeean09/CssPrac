@@ -8,7 +8,7 @@
   <body>
     <div class="navbar">
       <div class="left-nav">
-        <h1>Boba</h1>
+        <h1>Kitties</h1>
       </div>
       <div class="right-nav">
         <h1>About Us</h1>
@@ -25,11 +25,49 @@
         <p>Chew string running Scooby snacks chow bed mouse kitten parrot tail pet gate harness. Pet Supplies hamster chew tabby warm throw mouse paws slobber Snowball dragging gimme five ferret lol catz fetch aquatic cage food wet nose vitamins.Chirp Snowball stay biscuit sit leash head foot small animals lazy dog nest. Stay fleas chow finch park ferret scratcher. Tigger fetch groom play drool house train catch kibble aquarium licks brush wagging.</p>
       </div>
       <div class="cat-imgs-container">
-        <img class="cat-img" src="./images/kitty.jpg" />
-        <img class="cat-img" src="./images/kitty2.jpg" />
-        <img class="cat-img" src="./images/kitty3.jpg" />
-        <img class="cat-img" src="./images/kitty4.jpg" />
+        <img class="mySlides" src="./images/kitty.jpg" />
+        <img class="mySlides" src="./images/kitty2.jpg" />
+        <img class="mySlides" src="./images/kitty3.jpg" />
+        <img class="mySlides" src="./images/kitty4.jpg" />
+        <div>
+          <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+          <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+        </div>
       </div>
     </div>
+    <script>
+      let slideIdx = 1;
+      showDivs(slideIdx);
+
+      function plusDivs(n) {
+        showDivs(slideIdx += n);
+      }
+
+      function currentDiv(n) {
+        showDivs(slideIdx = n);
+      }
+
+      function showDivs(n) {
+        let x = document.getElementsByClassName('mySlides');
+        let dots = document.getElementsByClassName('demo');
+        console.log(x);
+
+        if (n > x.length) { slideIdx = 1 };
+        if (n < 1) { slideIdex = x.length };
+
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+           dots[i].className = dots[i].className.replace(" w3-white", "");
+        }
+
+        x[slideIdx - 1].style.display = "block";
+        dots[slideIdx - 1].className += " w3-white";
+      }
+    </script>
   </body>
 </html>
