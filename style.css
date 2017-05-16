@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: pink;
+  font-family: arial;
+  font-size: 12px;
+}
+
+.left-nav, .right-nav > h1 {
+  margin: 10px;
+}
+
+.left-nav {
+  display: flex;
+}
+
+.right-nav {
+  display: flex;
+}
+
+.main-content {
+  font-family: arial;
+
+}
+
+.header-content {
+  text-align: center;
+}
