@@ -112,7 +112,7 @@
 .show {display:block;}
 
 .color {
-  animation: spin 2s infinite linear;
+  animation: spin 5s infinite linear;
   /*top: 30px;*/
   position: relative;
 }
@@ -144,9 +144,9 @@
 }*/
 
 @keyframes spin {
-    100% {
-        transform: rotate(180deg);
-    }
+  100% {
+      transform: rotate(360deg);
+  }
 }
 
 /*@keyframes scale {
@@ -154,3 +154,24 @@
          transform: scaleX(2) scaleY(2);
     }
 }*/
+
+.box2 {
+  border: 1px solid #CCC;
+  height: 360px;
+  width: 360px;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  width: 720px;
+}
+#anim-four {
+  text-align: center;
+  animation: heartbeat .5s cubic-bezier(0.245, 0.325, 0.510, 1.305) infinite alternate;
+  font-size: 160px;
+  margin-top: 60px;
+  color: darken(#FB7E6E, 30%);
+}
+
+@keyframes heartbeat {
+  to {transform: scale(1.2)}
+}
