@@ -169,9 +169,24 @@
   animation: heartbeat .5s cubic-bezier(0.245, 0.325, 0.510, 1.305) infinite alternate;
   font-size: 160px;
   margin-top: 60px;
-  color: darken(#FB7E6E, 30%);
+  /*color: darken(#FB7E6E, 30%);*/
+  color: pink;
 }
 
 @keyframes heartbeat {
   to {transform: scale(1.2)}
+}
+
+#anim-one {
+  text-align: center;
+  padding-top: 100px;
+  font-size: 0;
+  font-weight: 700;
+  color: #00CED2;
+  animation: bounce-text 2s infinite cubic-bezier(0.245, 0.325, 0.670, 1.510);
+}
+
+@keyframes bounce-text {
+  60% {font-size: 60px}
+  100% {font-size: 60px}
 }
