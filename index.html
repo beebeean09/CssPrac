@@ -37,37 +37,66 @@
           <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
         </div>
       </div>
+      <div class="color">
+        <div class="box"></div>
+      </div>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
     </div>
     <script>
-      let slideIdx = 1;
-      showDivs(slideIdx);
+      // let slideIdx = 1;
+      // showDivs(slideIdx);
+      //
+      // function plusDivs(n) {
+      //   showDivs(slideIdx += n);
+      // }
+      //
+      // function currentDiv(n) {
+      //   showDivs(slideIdx = n);
+      // }
+      //
+      // function showDivs(n) {
+      //   let x = document.getElementsByClassName('mySlides');
+      //   let dots = document.getElementsByClassName('demo');
+      //   console.log(x);
+      //
+      //   if (n > x.length) { slideIdx = 1 };
+      //   if (n < 1) { slideIdex = x.length };
+      //
+      //   for (i = 0; i < x.length; i++) {
+      //      x[i].style.display = "none";
+      //   }
+      //   for (i = 0; i < dots.length; i++) {
+      //      dots[i].className = dots[i].className.replace(" w3-white", "");
+      //   }
+      //
+      //   x[slideIdx - 1].style.display = "block";
+      //   dots[slideIdx - 1].className += " w3-white";
+      // }
+      function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
 
-      function plusDivs(n) {
-        showDivs(slideIdx += n);
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
       }
-
-      function currentDiv(n) {
-        showDivs(slideIdx = n);
-      }
-
-      function showDivs(n) {
-        let x = document.getElementsByClassName('mySlides');
-        let dots = document.getElementsByClassName('demo');
-        console.log(x);
-
-        if (n > x.length) { slideIdx = 1 };
-        if (n < 1) { slideIdex = x.length };
-
-        for (i = 0; i < x.length; i++) {
-           x[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-           dots[i].className = dots[i].className.replace(" w3-white", "");
-        }
-
-        x[slideIdx - 1].style.display = "block";
-        dots[slideIdx - 1].className += " w3-white";
-      }
+    }
+  }
+}
     </script>
   </body>
 </html>
