@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tool Tip</title>
+  </head>
+  <style>
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted black;
+    }
+
+    .tooltip .tooltip-text {
+      visibility: hidden;
+      border: 1px solid grey;
+      border-radius: 4px;
+      padding: 5px 0;
+      color: white;
+      font-size: 18;
+      font-family: Arial;
+      background-color: grey;
+      position: absolute;
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    .tooltip:hover .tooltip-text {
+      visibility: visible;
+    }
+
+  </style>
+  <body>
+      <div class="tooltip">Button Hover
+        <div class="tooltip-text">Hello Secret Message!</div>
+      </div>
+  </body>
+</html>
