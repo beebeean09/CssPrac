@@ -5,24 +5,35 @@
     <title>Tool Tip</title>
   </head>
   <style>
+
+    body {
+      font-size: 100px;
+      text-align: center;
+      font-family: Arial;
+      color: black;
+    }
+
     .tooltip {
       position: relative;
       display: inline-block;
       border-bottom: 1px dotted black;
+      cursor: pointer;
+      margin: 100px 0;
     }
 
     .tooltip .tooltip-text {
       visibility: hidden;
       border: 1px solid grey;
-      border-radius: 4px;
-      padding: 5px 0;
+      border-radius: 3px;
+      padding: 15px;
       color: white;
-      font-size: 18;
-      font-family: Arial;
+      font-size: 50px;
       background-color: grey;
+      text-align: center;
+      top: 135px;
+      right: 39.3px;
       position: absolute;
       z-index: 1;
-      cursor: pointer;
     }
 
     .tooltip:hover .tooltip-text {
@@ -34,5 +45,6 @@
       <div class="tooltip">Button Hover
         <div class="tooltip-text">Hello Secret Message!</div>
       </div>
+      <div>Under the Hover!</div>
   </body>
 </html>
