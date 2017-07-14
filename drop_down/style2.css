@@ -14,7 +14,7 @@
   padding: 10px 25px;
   cursor: pointer;
   /*border: 1px solid rgba(61, 167, 154, 0.7);*/
-  background: rgba(61, 167, 154, 0.7);
+  background: rgb(61, 167, 154);
   border-radius: 3px;
   color: white;
 }
@@ -43,7 +43,8 @@ ul {
 
 .content-item {
   border: 1px solid grey;
-  background: grey;
+  background: rgba(146, 146, 146, 0.7);
+  /*background: grey;*/
 }
 
 .content-item:hover {
