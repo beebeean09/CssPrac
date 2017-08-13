@@ -5,22 +5,56 @@
     <title>Transition</title>
   </head>
   <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 4em;
+      font-family: sans-serif;
+    }
 
-  .box {
-    width: 100px;
-    height: 100px;
-    background: red;
-    -webkit-transition: width 2s; /* Safari */
-    transition: width 2s, height 2s;
-  }
+    .box {
+      display: flex;
+      width: 100px;
+      height: 100px;
+      background: red;
+      margin: 2em;
+      -webkit-transition: width 2s; /* Safari */
+      /*transition-timing-function: linear;*/
+    }
 
-  .box:hover {
-    width: 300px;
-    height: 300px;
-  }
+    .box:hover {
+      width: 200px;
+      height: 200px;
+    }
+
+    .box1 {
+      transition: width 2s ease-in, height 2s ease-in;
+    }
+
+    .box2 {
+      transition: width 2s ease-out, height 2s ease-out;
+    }
+
+    .box3 {
+      transition: width 2s linear, height 2s linear;
+    }
+
+    .box4 {
+      transition: width 2s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+      height 2s cubic-bezier(0.61, -0.19, 0.7, -0.11);
+    }
 
   </style>
   <body>
-    <div class="box"></div>
+    <h1>Ease-In (Slow Start)</h1>
+    <div class="box box1"></div>
+    <h1>Ease-Out (Slow End)</h1>
+    <div class="box box2"></div>
+    <h1>Linear (Constant)</h1>
+    <div class="box box3"></div>
+    <h1>Cubic</h1>
+    <div class="box box4"></div>
   </body>
 </html>
